@@ -1,0 +1,15 @@
+<h1>Your Top Champs</h1>
+<div class="list">
+<ul>
+<%@top_champs.each do |x|%>
+<li>
+  <%temp=x["championId"]%>
+  <%url=UrlApi.new()%>
+  <%name=url.find_champ(temp)%>
+  <%=image_tag "#{name['name']}_Square_0.png"%>
+  <%=link_to(name['name'].to_s,{controller: "champions",action: "show",id: x["championId"]})%><br>
+  <%="Champion Points :"+x["championPoints"].to_s%>
+</li>
+<%end%>
+</ul>
+</div>

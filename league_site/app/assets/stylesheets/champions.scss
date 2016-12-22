@@ -1,0 +1,44 @@
+// Place all the styles related to the Champions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.list{
+  padding-top: 25px;
+}
+.list ul{
+  list-style-type: none;
+}
+.list li{
+  background-color: #000000;
+  color: white;
+  border: solid white 1px;
+  font-size: 2.0em;
+}
+.list li a{
+  color:white;
+  text-decoration: none;
+  font-size: 2.2em;
+  font-style: italic;
+}
+.list li img{
+  float: left;
+}
+.main{
+  background-image: url("ablilty_background.jpg");
+  background-size: cover;
+  color: white;
+}
+.main h1{
+  text-align: center;
+}
+.main a{
+  display: block;
+  width: 200px;
+  height: 25px;
+  color: white;
+  border: 2px solid red;
+  border-radius: 5px;
+  text-align: center;
+}
+.main a:hover{
+  color: red;
+}

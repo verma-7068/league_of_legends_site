@@ -1,0 +1,22 @@
+<div class="main">
+<h1><%=@champion["name"]%></h1>
+<h2>Passive</h2>
+<p><%=@champion["passive"]["description"]%></p>
+<h2>Abilities</h2>
+<%arr=['Q','W','E','R']%>
+<%ctr=0%>
+<ul>
+<%@champion["spells"].each do |x|%>
+  <li>
+  <%=arr[ctr]%><br>
+  <%=x["name"]%><br>
+  <%="cooldown : "+x["cooldownBurn"]%><br>
+  <%="mana : " + x["costBurn"]%><br>
+  <%=x["description"]%>
+  <%ctr+=1%>
+</li>
+<%end%>
+</ul>
+<%champ_name=@champion["name"].downcase!.gsub(" ","-")%>
+<%=link_to("See Champion Builds","http://www.mobafire.com/league-of-legends/#{champ_name}-guide",:target=>"blank")%>
+</div>

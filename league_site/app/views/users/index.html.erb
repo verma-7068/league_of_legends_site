@@ -1,0 +1,19 @@
+<%if flash[:notice]!=nil%>
+<script>
+  alert("Invalid Summoner ID,try again!!");
+</script>
+<%end%>
+
+<div class="header">
+  <ul>
+    <li><%=link_to("Find Summoner",{controller:"users",action:"index"})%></li>
+    <li><%=link_to("All Champions",{controller:"champions",action:"index"})%></li>
+    <li><%=link_to("Free Champion Rotation",{controller:"free_to_play",action:"index"})%></li>
+  </ul>
+</div>
+<div class="form">
+<%=form_tag({controller:"users",action:"show"},method: "get")%>
+<%=text_field_tag(:summoner_id)%>
+<%=submit_tag("Search")%>
+</div>
+<%flash[:notice]=nil%>

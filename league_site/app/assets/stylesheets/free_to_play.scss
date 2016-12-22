@@ -1,0 +1,25 @@
+// Place all the styles related to the FreeToPlay controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.list1{
+  padding-top: 25px;
+}
+.list1 ul{
+  list-style-type: none;
+}
+.list1 li{
+  background-color: #000000;
+  color: white;
+  border: solid white 1px;
+}
+.list1 li a{
+  color:white;
+  text-decoration: none;
+  font-size: 60px;
+  font-style: italic;
+}
+.list1 li img{
+  float: left;
+  height: 70px;
+  width: 70px;
+}

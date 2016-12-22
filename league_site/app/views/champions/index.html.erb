@@ -1,0 +1,17 @@
+<div class="header">
+  <ul>
+    <li><%=link_to("Find Summoner",{controller:"users",action:"index"})%></li>
+    <li><%=link_to("All Champions",{controller:"champions",action:"index"})%></li>
+    <li><%=link_to("Free Champion Rotation",{controller:"free_to_play",action:"index"})%></li>
+  </ul>
+</div>
+<div class="list">
+  <ul>
+    <%@champions.each do |x,y|%>
+    <li><%=image_tag "#{x}_Square_0.png"%>
+      <%=link_to(x,champion_path(y['id']))%><br>
+      <%=y['title']%>
+    </li>
+    <%end%>
+  </ul>
+</div>
